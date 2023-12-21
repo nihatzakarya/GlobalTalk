@@ -1,0 +1,673 @@
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700;1,900&family=Tilt+Warp&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700;1,900&family=Tilt+Warp&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700;1,900&family=Tilt+Warp&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700;1,900&family=Tilt+Warp&display=swap');
+
+@font-face {
+    font-family: 'myFont';
+    src: url(../font/godfather.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --mainhorizontal: thin solid #beaeae;
+    --mainfamily: 'Montserrat', sans-serif;
+}
+
+.container {
+    max-width: 1180px;
+    margin: auto;
+}
+
+header {
+    border-bottom: var(--mainhorizontal);
+    background: #fff;
+}
+
+header nav {
+    padding: 24px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav .menu {
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 0.1;
+}
+
+header nav .register {
+    display: flex;
+    align-items: center;
+    flex-grow: 0.05;
+    justify-content: space-between;
+}
+
+header nav .menu .menu-button {
+    display: none;
+}
+
+header nav .menu .logo {
+    width: 130px;
+    height: 21px;
+    font-family: 'myFont' ,sans-serif;
+    font-size: 2.3em;
+    font-style: normal;
+    line-height: 100%;
+    letter-spacing: 0.01em;
+    color: #000000;
+}
+
+header nav menu hr {
+    width: 0px;
+    height: 16.87px;
+    border: 1.20466px solid #E0E0E0;
+}
+
+header nav menu{
+    border: 1px solid ;
+}
+
+header nav ul li {
+    display: inline;
+    margin-right: 30px;
+    /* border: 1px solid green; */
+}
+
+header nav ul li a {
+    /* border: 1px solid blue; */
+    font: 600 15px/140% var(--mainfamily);
+    font-style: normal;
+    letter-spacing: -0.04em;
+    color: #757575;
+    text-decoration: none;
+}
+
+header nav ul li ul.dropdown li{
+    display: block;    
+}
+
+header nav ul li ul.dropdown{
+    width: 95px;
+    margin-top: -3px;
+    /* border: 1px solid red; */
+    background: #fff;
+    position: absolute;
+    z-index: 999;
+    display: none;
+    margin-left: 277.5px;
+    
+}
+
+header nav ul li:hover ul.dropdown{
+    display: block;
+}
+
+
+header nav ul li a:hover {
+    color: #000;
+}
+
+i {
+    color: #757575;
+}
+
+header nav ul li a:hover+i {
+    color: #000;
+}
+
+header .register .userprofile {
+    text-decoration: none;
+}
+
+header .register .userprofile span {
+    width: 51px;
+    height: 14px;
+    font: 700 14px/100% var(--mainfamily);
+    font-style: normal;
+    letter-spacing: -0.04em;
+    color: #fff;
+}
+
+
+button {
+    border-radius: 150px;
+    background: #2B788B;
+    border: none;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    width: 110px;
+    height: 36px;
+    transition: all 1s;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgb(67, 67, 197);
+}
+
+button span {
+    cursor: pointer;
+    position: relative;
+    transition: 1s;
+    text-decoration: none;
+}
+
+button span:after {
+    content: '»';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -15px;
+    transition: 1s;
+    text-decoration: none;
+}
+
+button:hover {
+    padding-right: 15px;
+    text-decoration: none;
+}
+
+.a button:hover span:after {
+    opacity: 1;
+    right: 0;
+    text-decoration: none;
+}
+
+header .register .logout {
+    text-decoration: none;
+}
+
+header .register .logout span {
+    width: 51px;
+    height: 14px;
+    font: 700 14px/100% var(--mainfamily);
+    font-style: normal;
+    letter-spacing: -0.04em;
+    color: #000000;
+}
+
+header .register .logout i {
+    color: #000000;
+    font-size: 12px;
+}
+
+header .register .login {
+    text-decoration: none;
+}
+
+header .register .login span {
+    width: 51px;
+    height: 14px;
+    font: 700 14px/100% var(--mainfamily);
+    font-style: normal;
+    letter-spacing: -0.04em;
+    color: #000000;
+}
+
+header .register .login i {
+    color: #000000;
+    font-size: 12px;
+}
+
+header .register .sign-in {
+    text-decoration: none;
+}
+
+header .register .sign-in span {
+    width: 51px;
+    height: 14px;
+    font: 700 14px/100% var(--mainfamily);
+    font-style: normal;
+    letter-spacing: -0.04em;
+    color: #fff;
+}
+
+
+button {
+    border-radius: 150px;
+    background: #2B788B;
+    border: none;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    width: 120px;
+    height: 36px;
+    transition: all 1s;
+    cursor: pointer;
+}
+
+/* button:hover {
+    background-color: rgb(67, 67, 197);
+} */
+
+button span {
+    cursor: pointer;
+    position: relative;
+    transition: 1s;
+    text-decoration: none;
+}
+
+button span:after {
+    content: '»';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    /* right: -15px; */
+    transition: 1s;
+    text-decoration: none;
+}
+
+button:hover {
+    padding-right: 15px;
+    text-decoration: none;
+}
+
+.a button:hover span:after {
+    opacity: 1;
+    right: 0;
+    text-decoration: none;
+}
+
+/* First-Section-Start */
+
+#first-body {
+    padding-top: 97px;
+    padding-bottom: 100px;
+    height: 100%;
+    background-color: #F6F5F4;
+}
+
+section .first-content {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.first-body-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 44.78px;
+    width: 531px;
+    height: 510.78px;
+}
+
+.first-body-text .text1 {
+    width: 225px;
+    height: 16px;
+    font: 700 16px/100% var(--mainfamily);
+    font-style: normal;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #2B788B;
+}
+
+.first-body-text .text-strong-1 {
+    width: 531px;
+    height: 201px;
+    font: 400 56px/120% 'Dela Gothic One', cursive;
+    font-style: normal;
+    letter-spacing: -0.04em;
+    color: #000000;
+}
+
+.first-body-text .text2 {
+    width: 396.89px;
+    height: 50px;
+    font: 600 18px/140% var(--mainfamily);
+    font-style: normal;
+    letter-spacing: -0.04em;
+    color: #757575;
+}
+
+.first-body-text a {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 14px 22px;
+    width: 165px;
+    height: 44px;
+    background: #C3DCE3;
+    border-radius: 100px;
+    text-decoration: none;
+}
+
+
+
+.first-body-text a span {
+    width: 121px;
+    height: 16px;
+    font: 700 16px/100% var(--mainfamily);
+    font-style: normal;
+    letter-spacing: -0.04em;
+    color: #2B788B;
+    transition: all 1.4s;
+}
+
+.first-body-text a:hover {
+    background-color: #2B788B;
+    transition: all 0.7s;
+}
+
+.first-body-text a:hover span {
+    color: #C3DCE3;
+    transition: all 0.7s;
+}
+
+.about-games {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 48.78px;
+    width: 352.55px;
+    height: 65px;
+}
+
+.about-games hr {
+    width: 0px;
+    height: 48.78px;
+    border: 1.21942px solid #c2b7b7;
+}
+
+.popular-words {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    gap: 3px;
+    width: 163px;
+    height: 65px;
+}
+
+.mini-games {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    gap: 3px;
+    width: 92px;
+    height: 65px;
+
+}
+
+.popular-words .pwords-img {
+    display: flex;
+    align-items: center;
+    padding: 0px;
+    gap: 10px;
+    width: 163px;
+    height: 40px;
+}
+
+.mini-games .mgames-img {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 15px;
+    width: 100px;
+    height: 40px;
+}
+
+.about-games div p {
+    width: 112px;
+    height: 22px;
+    font: 600 16px 140% var(--mainfamily);
+    font-style: normal;
+    letter-spacing: -0.04em;
+    color: #585858;
+}
+
+.first-body-img {
+    position: relative;
+    width: 650px;
+    height: 582px;
+}
+
+.first-body-img img:nth-child(1) {
+    position: absolute;
+    width: 143px;
+    height: 171px;
+    left: 15.5px;
+    top: 187px;
+
+}
+
+.first-body-img img:nth-child(2) {
+    position: absolute;
+    width: 568.73px;
+    height: 497.28px;
+    left: 51.77px;
+    top: 0px;
+}
+
+.first-body-img img:nth-child(3) {
+    position: absolute;
+    width: 416px;
+    height: 505px;
+    left: 346.5px;
+    top: 105px;
+}
+
+/* First-Section-End */
+
+/* Second-Section-Start */
+
+#second-body {
+    padding: 77.5px 0;
+    background-color: #fff;
+}
+
+.second-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.second-body-text {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.second-body-text .text3 {
+    width: 474.46px;
+    height: 96px;
+    font: 400 48px/100% 'Dela Gothic One', cursive;
+    font-style: normal;
+    letter-spacing: -0.04em;
+    color: #000000;
+}
+
+.second-body-text .text4 {
+    width: 396.89px;
+    height: 50px;
+    font: 600 18px/140% var(--mainfamily);
+    font-style: normal;
+    letter-spacing: -0.04em;
+    color: #757575;
+}
+
+.second-body-card {
+    padding-top: 35px;
+    display: flex;
+    position: relative;
+    gap: 20px;
+}
+
+.second-body-card .first-card {
+    position: absolute;
+    top: 5px;
+
+}
+
+.second-body-card .second-card {
+    position: absolute;
+    top: 0px;
+    left: 190px;
+}
+
+.second-body-card div {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    border-radius: 14px;
+    padding-bottom: 15px;
+}
+
+.second-body-card span {
+    margin-right: 7px;
+}
+
+.second-body-card img {
+    position: relative;
+    animation: moveUpDown 2s ease-in-out infinite;
+}
+
+@keyframes moveUpDown {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.second-body-pinkbox {
+    width: 129px;
+    height: 112px;
+    background: #F2D4DC;
+}
+
+.first-card-text {
+    font: 700 16px/100% var(--mainfamily);
+    font-style: normal;
+    letter-spacing: -0.04em;
+    color: #945069;
+}
+
+.second-body-cyanbox {
+    width: 172px;
+    height: 112px;
+    background: #C3DCE3;
+}
+
+.second-card-text {
+    font: 700 16px/100% var(--mainfamily);
+    font-style: normal;
+    letter-spacing: -0.04em;
+    color: #2B788B;
+}
+
+/* Second-Section-End */
+
+/* Footer-Start */
+
+footer {
+    background-color: #F6F5F4;
+    padding: 40px 0;
+}
+
+.footer-menu {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-menu ul li {
+    display: inline;
+    margin-right: 30px;
+}
+
+.footer-menu ul:nth-child(1) li:nth-child(5) {
+    margin-right: 0;
+}
+
+.footer-menu ul:nth-child(2) li:nth-child(3) {
+    margin-right: 0;
+}
+
+.footer-menu ul:nth-child(2) li {
+    width: 32px;
+    height: 14px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 100%;
+    color: #757575;
+}
+
+.footer-menu ul:nth-child(1) {
+    width: 433px;
+    height: 14px;
+}
+
+.footer-menu ul:nth-child(2) {
+    width: 204px;
+    height: 14px;
+}
+
+.footer-menu ul:nth-child(1) li a {
+    text-decoration: none;
+    width: 44px;
+    height: 14px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 100%;
+    color: #757575;
+}
+
+footer hr {
+    border: 1.20466px solid #E0E0E0;
+    margin: 20px 0 23px 0;
+}
+
+.footer-bottom{
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-social-link{
+    width: 150px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-bottom p{
+    width: 247px;
+height: 12px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 600;
+font-size: 12px;
+line-height: 100%;
+color: #757575;
+}
+
+.footer-bottom p span{
+    text-decoration: underline;
+}
+
+/* Footer-End */

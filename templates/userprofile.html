@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <link rel="stylesheet" href="../static/css/userprofile.css" />
+    <title>My Profile</title>
+    <link rel="website icon" type="png" href="../static/img/Logo.png">
+
+    <script src="../static/js/clickBtn.js"></script>
+</head>
+
+
+<!-- <div id="div-form"></div> -->
+<!-- <form class="inl inl0" id="form" action="" method="post">
+  {% csrf_token %}
+    <label class="inl inl1" for="lin">
+      <img src="{{ request.user.profile.image.url }}" alt="" class="form-image">
+    </label>
+    <input class="inl inl2" type="file" id="lin" name="image">
+    <button class="inl inl3" id="b1" type="submit">SAVE</button>
+
+    <script src="../static/js/userprofile.js"></script>
+</form> -->
+
+
+<body>
+    <div class="header__wrapper">
+      <header></header>
+      <div class="cols__container">
+
+        <div class="left__col">
+            
+          <div class="img__container" id="sekil">
+            <img src="{{ request.user.profile.image.url }}" alt="Username">
+            <span></span>
+          </div>
+          <h2>{{ request.user.username }}</h2>
+          <!-- <p>{{ request.user.id }}</p> -->
+          <p>{{ request.user.email }}</p> 
+
+          <!-- <ul class="about">
+            <li><span>0</span>Followers</li>
+            <li><span>0</span>Following</li>
+            <li><span id="clickText">0</span>Game Scores</li> -->
+            </ul>
+          <br>
+
+          <div class="content">
+            <p>
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aliquam
+              erat volutpat. Morbi imperdiet, mauris ac auctor dictum, nisl
+              ligula egestas nulla.
+            </p>
+
+            <ul>
+              <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+              <a href="#"><i class="fab fa-pinterest"></i></a>
+              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+            </ul>
+          </div>
+        </div>
+        <div class="right__col">
+          <nav>
+            <ul>
+              <li><a href="{% url 'home' %}">home</a></li>
+              <li><a href="{% url 'textbook' %}">TextBook</a></li>
+              <li><a href="{% url 'dictionary' %}">statistics</a></li>
+              <!-- {% if request.user.is_authenticated %} -->
+              <li><a href="{% url 'logout' %}">Log Out</a></li>
+              <!-- {% endif %} -->
+            </ul>
+          </nav>
+
+          <button class="button" onclick="clickButton()">click</button>
+
+          <!-- <div class="photos">
+            <img src="#" alt="Photo" />
+            <img src="#" alt="Photo" />
+            <img src="#" alt="Photo" />
+            <img src="#" alt="Photo" />
+            <img src="#" alt="Photo" />
+            <img src="#" alt="Photo" />
+          </div> -->
+        </div>
+      </div>
+    </div>
+  
+</body>
+</html>

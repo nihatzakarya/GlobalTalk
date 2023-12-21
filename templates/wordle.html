@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Wordle Game</title>
+    <link rel="website icon" type="png" href="../static/img/Logo.png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Source+Serif+Pro:wght@900&display=swap"/>
+    <link rel="stylesheet" href="../static/css/wordle.css" />
+  </head>
+  
+  <body>
+    <header>
+      <h1>Wordle</h1>
+    </header>
+
+    <main>
+      <!-- word board -->
+      <div class="word-board">
+        <div class="board-row board-row--1">
+          <div class="board-letter"><span></span></div>
+          <div class="board-letter"><span></span></div>
+          <div class="board-letter"><span></span></div>
+          <div class="board-letter"><span></span></div>
+          <div class="board-letter"><span></span></div>
+        </div>
+        <div class="board-row board-row--2">
+          <div class="board-letter"><span></span></div>
+          <div class="board-letter"><span></span></div>
+          <div class="board-letter"><span></span></div>
+          <div class="board-letter"><span></span></div>
+          <div class="board-letter"><span></span></div>
+        </div>
+        <div class="board-row board-row--3">
+          <div class="board-letter"><span></span></div>
+          <div class="board-letter"><span></span></div>
+          <div class="board-letter"><span></span></div>
+          <div class="board-letter"><span></span></div>
+          <div class="board-letter"><span></span></div>
+        </div>
+        <div class="board-row board-row--4">
+          <div class="board-letter"><span></span></div>
+          <div class="board-letter"><span></span></div>
+          <div class="board-letter"><span></span></div>
+          <div class="board-letter"><span></span></div>
+          <div class="board-letter"><span></span></div>
+        </div>
+        <div class="board-row board-row--5">
+          <div class="board-letter"><span></span></div>
+          <div class="board-letter"><span></span></div>
+          <div class="board-letter"><span></span></div>
+          <div class="board-letter"><span></span></div>
+          <div class="board-letter"><span></span></div>
+        </div>
+        <div class="board-row board-row--6">
+          <div class="board-letter"><span></span></div>
+          <div class="board-letter"><span></span></div>
+          <div class="board-letter"><span></span></div>
+          <div class="board-letter"><span></span></div>
+          <div class="board-letter"><span></span></div>
+        </div>
+      </div>
+
+      <!-- on screen keyboard -->
+      <div id="keyboard">
+        <div class="keyboard-row">
+          <button class="keyboard-letter">q</button>
+          <button class="keyboard-letter">w</button>
+          <button class="keyboard-letter">e</button>
+          <button class="keyboard-letter">r</button>
+          <button class="keyboard-letter">t</button>
+          <button class="keyboard-letter">y</button>
+          <button class="keyboard-letter">u</button>
+          <button class="keyboard-letter">i</button>
+          <button class="keyboard-letter">o</button>
+          <button class="keyboard-letter">p</button>
+        </div>
+        <div class="keyboard-row">
+          <button class="keyboard-letter">a</button>
+          <button class="keyboard-letter">s</button>
+          <button class="keyboard-letter">d</button>
+          <button class="keyboard-letter">f</button>
+          <button class="keyboard-letter">g</button>
+          <button class="keyboard-letter">h</button>
+          <button class="keyboard-letter">j</button>
+          <button class="keyboard-letter">k</button>
+          <button class="keyboard-letter">l</button>
+        </div>
+        <div class="keyboard-row">
+          <button class="keyboard-letter keyboard-letter--enter">enter</button>
+          <button class="keyboard-letter">z</button>
+          <button class="keyboard-letter">x</button>
+          <button class="keyboard-letter">c</button>
+          <button class="keyboard-letter">v</button>
+          <button class="keyboard-letter">b</button>
+          <button class="keyboard-letter">n</button>
+          <button class="keyboard-letter">m</button>
+          <button class="keyboard-letter keyboard-letter--delete">
+            <i class="fa-solid fa-delete-left"></i>
+          </button>
+        </div>
+      </div>
+    </main>
+
+    <!-- result modal -->
+    <div id="result-modal" class="hidden">
+      <p id="result-text"></p>
+      <p class="secret-word-container">
+        The word was: <span id="secret-word"></span>
+      </p>
+      <button id="play-again">Play Again</button>
+    </div>
+
+    <script src="../static/js/wordle.js"></script>
+  </body>
+</html>

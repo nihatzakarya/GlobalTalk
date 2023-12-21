@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../static/css/about_us.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+        <title>About us</title>
+        <link rel="website icon" type="png" href="../static/img/Logo.png">
+    </head>
+    <body>
+        
+        <header>
+            <div class="brand">GlobalTalk</div>
+            <div class="menu-btn"></div>
+            <div class="navigation">
+                <div class="navigation-items">
+                    <a href="{% url 'home' %}">Home</a>
+                    <a href="{% url 'textbook' %}">Textbook</a>
+                    <a href="{% url 'dictionary' %}">Dictionary</a>
+                    <a href="{% url 'wordle' %}">Games</a>
+                </div>
+            </div>
+        </header>
+
+        <section class="home">
+            <video class="video-slide active" src="../static/videos/1.mp4" autoplay muted loop></video>
+            <video class="video-slide" src="../static/videos/2.mp4" autoplay muted loop></video>
+            <video class="video-slide" src="../static/videos/3.mp4" autoplay muted loop></video>
+            <video class="video-slide" src="../static/videos/4.mp4" autoplay muted loop></video>
+            <video class="video-slide" src="../static/videos/5.mp4" autoplay muted loop></video>
+            <div class="content active">
+                <h1>Wonderful<br><span>Learning</span></h1>
+            <p>GlobalTalk is an innovative e-learning platform designed for language enthusiasts. With a user-friendly interface, it offers a diverse range of courses, making language learning engaging and accessible. The platform integrates interactive lessons, games, and statistical tracking for personalized learning experiences. GlobalTalk also features a dynamic discussion forum, fostering a global community of learners. Whether you're a beginner or an advanced learner, GlobalTalk provides a comprehensive language learning environment.</p>
+            <a href="{% url 'home' %}">Explore Now</a>
+            </div>
+            <div class="content">
+                <h1>Textbook<br><span>Materials</span></h1>
+            <p>The "Textbook" feature in GlobalTalk serves as the foundational pillar for language education. Here, users can access a curated collection of comprehensive learning materials, ranging from fundamental grammar rules to advanced vocabulary. The platform's Textbook section goes beyond traditional methods, incorporating multimedia elements such as videos, interactive quizzes, and real-world language examples. Learners can navigate through lessons at their own pace, fostering a personalized and adaptive learning experience. </p>
+            <a href="{% url 'textbook' %}">Learn Now</a>
+            </div>
+            <div class="content">
+                <h1>Dictionary<br><span>Improve</span></h1>
+            <p>The Dictionary section in our e-learning platform is a linguistic treasure trove, offering learners a comprehensive repository of words, each accompanied by detailed definitions and real-world examples. It's not just a glossary; it's a dynamic tool crafted to enrich your language journey. Whether you're a novice or an adept speaker, delve into our Dictionary to explore the intricacies of language, empowering yourself with a deeper understanding of words and their contextual nuances. Your linguistic mastery begins here! </p>
+            <a href="{% url 'dictionary' %}">Try Now</a>
+            </div>
+            <div class="content">
+                <h1>Discuss<br><span>Together</span></h1>
+            <p>Discussing on GlobalTalk is a collaborative space where users can engage in meaningful conversations about language, culture, and learning experiences. This feature fosters a sense of community by connecting learners worldwide, providing a platform to share insights, ask questions, and exchange cultural perspectives. Encouraging open dialogue, the forum promotes a supportive environment for language learners to interact, learn from each other, and broaden their understanding of different languages and cultures.</p>
+            <!-- <a href="#">Read More</a> -->
+            </div>
+            <div class="content">
+                <h1>Games<br><span>Enjoy</span></h1>
+            <p>The "Games" section of GlobalTalk adds a playful dimension to language learning, offering a variety of interactive and educational games that reinforce vocabulary, grammar, and language skills. From word puzzles to quizzes, these engaging activities cater to diverse learning styles, making the language acquisition process enjoyable. This gamified approach not only captivates learners but also enhances retention and practical application of language skills. In essence, the Games section reflects GlobalTalk's commitment to creating a dynamic and immersive learning platform.</p>
+            <a href="{% url 'wordle' %}">Play Now</a>
+            </div>
+            <div class="media-icons">
+                <a href="https://www.facebook.com/profile.php?id=100084881246797"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/nihat-zakarya-16349b299/"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <div class="slider-navigation">
+                <div class="nav-btn active"></div>
+                <div class="nav-btn"></div>
+                <div class="nav-btn"></div>
+                <div class="nav-btn"></div>
+                <div class="nav-btn"></div>
+            </div>
+        </section>
+
+        <!-- <script type="text/javascript">
+            //navigation menyusu ucun js
+            const menuBtn = document.querySelector(".menu-btn");
+            const navigation = document.querySelector(".navigation");
+
+            menuBtn.addEventListener("click", () =>{
+                menuBtn.classList.toggle("active")
+                navigation.classList.toggle("active")
+            });
+
+
+            //bir videodan digerine kecmek ucun js
+            const btns = document.querySelectorAll(".nav-btn");
+            const slides = document.querySelectorAll(".video-slide");
+            const contents = document.querySelectorAll(".content");
+
+            var sliderNav = function(manual){
+                btns.forEach((btn) => {
+                    btn.classList.remove("active");
+                });
+
+                slides.forEach((slide) => {
+                    slide.classList.remove("active");
+                });
+
+                contents.forEach((content) => {
+                    content.classList.remove("active");
+                });
+
+                btns[manual].classList.add("active");
+                slides[manual].classList.add("active");
+                contents[manual].classList.add("active");
+            }
+
+            btns.forEach((btn, i) => {
+                btn.addEventListener("click", () => {
+                    sliderNav(i);
+                });
+            });
+        </script> -->
+
+        <script src="../static/js/about_us.js"></script>
+
+    </body>
+</html>

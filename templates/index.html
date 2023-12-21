@@ -1,0 +1,203 @@
+{% load static simple_tags %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="../static/css/main_res.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../static/css/directory.css">
+    <title>GlobalTalk</title>
+    <link rel="website icon" type="png" href="../static/img/Logo.png">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav>      
+                <div class="menu">
+                    <img class="menu-button" src="../static/img/Burger.png" alt="">
+                    <span class="logo">GlobalTalk</span>
+                    <hr>
+
+                    <ul>
+                        <li>
+                            <a href="{% url 'home' %}" class="active">Home</a>
+                        </li>
+                        <li><a href="{% url 'textbook' %}">Textbook</a></li>
+                        <li><a href="{% url 'dictionary' %}">Dictionary</a></li>
+                        <li>
+                            <a href="#">Games ▾</a>
+                            <ul class="dropdown">
+                                {% game as games %}
+                                {% for i in games %}
+                                <li><a href="{% url 'wordle' %}">{{i.name}}</a></li>
+                                {% endfor %}
+                                <li><a href="{% url 'hangman' %}">Hangman</a></li>
+                               <!--  <li><a href="#">game 3</a></li>
+                                <li><a href="#">game 4</a></li> -->
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="{% url 'about_us' %}" class="about-us">
+                                <span>About us</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="register">
+                    {% if request.user.is_authenticated %}
+                    <a href="{% url 'userprofile' %}" class="userprofile"><button><span>{{request.user.username}}</span></button></a>
+                    <a href="{% url 'logout' %}" class="logout"><span>Log out</span><i class="fa-solid fa-arrow-right"></i></a>
+                    {% else %}
+                    <a href="{% url 'login' %}" class="login"><span>Login</span><i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="{% url 'sign' %}" class="sign-in"><button><span>Sign in</span></button></a>
+                    {% endif %}
+                </div>
+            </nav>
+        </div>
+    </header>
+
+
+    <section id="first-body">
+        <div class="container">
+            <div class="first-content">
+                <div class="first-body-text">
+                    <p class="text1">E-course platform</p>
+                    <p class="text-strong-1"> Learning and teaching online, made easy.</p>
+                    <p class="text2">Practice your English and learn new things with the platform.</p>
+                    <a href="{% url 'about_us' %}"><span>About platform</span></a>
+                    <div class="about-games">
+                        <div class="popular-words">
+                            <div class="pwords-img">
+                                <img src="../static/img/Shazam.png" alt="">
+                                <img src="../static/img/600+.png" alt="">
+                            </div>
+                            <div>
+                                <p>Popular words</p>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="mini-games">
+                            <div class="mgames-img">
+                                <img src="../static/img/Vector.png" alt="">
+                                <img src="../static/img/2+.png" alt="">
+                            </div>
+                            <div>
+                                <p>Mini-Games</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="first-body-img">
+                    <img src="../static/img/image 6.png" alt="">
+                    <img src="../static/img/casual-life-3d-boy-sitting-at-the-desk-with-open-book 9.png" alt="">
+                    <img src="../static/img/image 12.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="second-body">
+        <div class="container">
+            <div class="second-content">
+                <div class="second-body-img">
+                    <img src="../static/img/image 8.png" alt="">
+                </div>
+                <div class="second-body-text">
+                    <p class="text3">Learn a language in a playful way</p>
+                    <p class="text4">Make learning words more fun with mini-games</p>
+                    <div class="second-body-card">
+                        <img class="first-card" src="../static/img/image 10.png" alt="">
+                        <img class="second-card" src="../static/img/image 11.png" alt="">
+                        <div class="second-body-pinkbox">
+                            <span class="first-card-text">Sprint</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                        <div class="second-body-cyanbox">
+                            <span class="second-card-text">Audio-call</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="main">
+        <div class="basliq">
+            <h1>Directory</h1>
+        </div>
+        <div class="blocks">
+            <div class="s1">
+                <div class="image">
+                    <img src="../static/img/dir-1.jpg" alt="">
+                </div>
+                <div class="text">
+                    <h1>TextBook</h1>
+                    <h3>Explore our comprehensive digital textbook on GlobalTalk, offering structured lessons and rich multimedia content for effective language learning.</h3>
+                </div>
+                <div class="kecid">
+                    <a href="{% url 'textbook' %}">START LEARNING ></a>
+                </div>
+            </div>
+            <div class="s2">
+                <div class="image">
+                    <img src="../static/img/dir-2.jpg" alt="">
+                </div>
+                <div class="text">
+                    <h1>Dictionary</h1>
+                    <h3> In the context of your e-learning platform, a dictionary is a curated collection of words with definitions and examples. </h3>
+                </div>
+                <div class="kecid">
+                    <a href="{% url 'dictionary' %}">CHECK IT OUT ></a>
+                </div>
+            </div>
+            <div class="s3">
+                <div class="image">
+                    <img src="../static/img/dir-3.jpg" alt="">
+                </div>
+                <div class="text">
+                    <h1>Games</h1>
+                    <h3>Elevate your language skills through engaging games on GlobalTalk, turning learning into a fun and interactive experience.</h3>
+                </div>
+                <div class="kecid">
+                    <a href="{% url 'wordle' %}">PLAY NOW ></a>
+                </div>
+            </div>
+        </div>
+    </div><br>
+
+    
+    <footer>
+        <div class="container">
+            <div class="footer-menu">
+                <ul>
+                    <li><a href="#">Awards</a></li>
+                    <li><a href="{%  url 'faqs' %}">FAQs</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="{%  url 'our_team' %}">Our team</a></li>
+                </ul>
+
+                <ul>
+                    <li>Nihat Zakarya</li>
+                </ul>
+            </div>
+            <hr>
+            <div class="footer-bottom">
+                <div class="footer-social-link">
+                    <a href=""><img src="../static/img/Vector12.png" alt=""></a>
+                    <a href=""><img src="../static/img/GT.png" alt=""></a>
+                    <a href=""><img src="../static/img/youtube.png" alt=""></a>
+                </div>
+                <p>©2023 GlobalTalk. Project for <span>GlobalTalk</span>.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
